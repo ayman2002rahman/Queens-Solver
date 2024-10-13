@@ -37,6 +37,7 @@ def solve(grid):
     dfs(0)
     return list(queens)
 
+load_dotenv()
 username = os.getenv('LINKEDIN_USERNAME')
 password = os.getenv('LINKEDIN_PASSWORD')
 
@@ -56,7 +57,7 @@ time.sleep(1)
 
 driver.get('https://www.linkedin.com/games/queens/')
 
-play_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, 'ember36')))
+play_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, 'ember38')))
 play_button.click()
 
 parent_div = driver.find_element(By.ID, "queens-grid")
